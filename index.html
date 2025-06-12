@@ -3,109 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./images/IBI-logo.png" type="image/png">
+    <title>IB Investing</title>
 </head>
 <body>
-    <div class="container">
+    <div class="not-available">
+        <img src="./images/IBI-logo.png" class="not-available-logo">
+        <div>Not available for this screen size.</div>
+        <div>IBI for small screens is coming soon!</div>
+    </div>
+    <div class="root-container">
+        <header class="header">
 
-        <div class="header">
+            <input type="search" autocomplete='off' name="search" id="search" placeholder="Search...">
 
-            <div class="top">
-                <input type="search" placeholder="Search...">
-                
-                <div>
-                    bell
+            <div class="header-menu">
+                <div class="notif-area">
+                    <button id="notif-btn"><ion-icon name="notifications" aria-hidden="true"></ion-icon></button>
+                    <button id="msg-btn"><ion-icon name="chatbox-ellipses" aria-hidden="true"></ion-icon></button>
                 </div>
-                <div>
-                    picutre
+                <div class="profile-info">
+                    <a href="https://github.com" title="Github Repository" target="_blank">
+                        <ion-icon name="logo-octocat" aria-hidden="true"></ion-icon>
+                    </a>
+                    <div>
+                        <div class="profile-name">Imed B.</div>
+                        <div class="product-name">IB Investing</div>
+                    </div>
+                    <button id="profile-dropdown"><ion-icon name="chevron-down" aria-hidden="true"></ion-icon></button>
                 </div>
-                <div>name</div>
             </div>
-
-            <div class="bottom">
-
-                <div>picture</div>
-                <div>hi there...NAME</div>
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
-            </div>
-
-        </div>
+        </header>
 
         <div class="sidebar">
-           <div>DASHBOARD</div>
-            <ul>
-                <li>HOME</li>
-                <li>MESSAGES</li>
-                <li>HISTORY</li>
-                <li>TASKS</li>
-                <li>COMMUNIIES</li>
+            <header class="sidebar-header">
+                <img class="logo" src="./images/IBI-logo.png" alt="IBI Logo">
+                <span>IB Investing</span>
+            </header>
+            <ul class="nav-bar">
+                <li class="nav-item active">
+                    <ion-icon name="grid" aria-hidden="true"></ion-icon>
+                    <span>Dashboard</span>
+                </li>
+                <li class="nav-item">
+                    <ion-icon name="document-text" aria-hidden="true"></ion-icon>
+                    <span>Portfolio</span>
+                </li>
+                <li class="nav-item">
+                    <ion-icon name="repeat" aria-hidden="true"></ion-icon>
+                    <span>Transaction</span>
+                </li>
+                <li class="nav-item">
+                    <ion-icon name="map" aria-hidden="true"></ion-icon>
+                    <span>Saving Plan</span>
+                </li>
+                <li class="nav-item">
+                    <ion-icon name="diamond" aria-hidden="true"></ion-icon>
+                    <span>Mutual Funds</span>
+                </li>
+                <li class="nav-item">
+                    <ion-icon name="settings" aria-hidden="true"></ion-icon>
+                    <span>Settings</span>
+                </li>
             </ul>
-
-            <ul>
-                <li>SETTINGS</li>
-                <li>SUPPORT</li>
-                <li>PRIVACY</li>
+            <ul class="sidebar-footer">
+                <li class="footer-item">
+                    <ion-icon name="help-circle" aria-hidden="true"></ion-icon>
+                    <span>Help Center</span>
+                </li>
+                <li class="footer-item">
+                    <ion-icon name="headset" aria-hidden="true"></ion-icon>
+                    <span>Customer Care</span>
+                </li>
+                <li class="footer-item">
+                    <ion-icon name="log-out" aria-hidden="true"></ion-icon>
+                    <span>Sign Out</span>
+                </li>
             </ul>
         </div>
 
-        <div class="main">
-            <div class="projects">
-
-                <div class="project-item">
-                    <h3>title</h3>
-                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A necessitatibus dolore </div>
+        <main class="main">
+            <header class="main-header">
+                <div>
+                    <h1>Welcome Back Imed B.</h1>
+                    <p>Get updates on your assets today.</p>
                 </div>
 
-                <div class="project-item">
-                    <h3>title</h3>
-                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A necessitatibus dolore </div>
+                <div>
+                    <button>
+                        <ion-icon name="cloud-download" aria-hidden="true"></ion-icon>
+                        <span>Download Report</span>
+                    </button>
+                </div>
+            </header>
+            <section class="statistics-container">
+
+                <div class="card col-4">
+                    <div class="card-header">
+                        <h5>Portfolio Value</h5>
+                        <ion-icon class="clr-primary" name="layers" aria-hidden="true"></ion-icon>
+                    </div>
+                    <div class="card-body flex-row">
+                        <span class="asset">$182,410</span>
+                        <span class="asset-index">+$175 today</span>
+                    </div>
                 </div>
 
-                <div class="project-item">
-                    <h3>title</h3>
-                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A necessitatibus dolore </div>
+                <div class="card col-4">
+                    <div class="card-header">
+                        <h5>Year-to-Date Returns</h5>
+                        <ion-icon class="clr-purple" name="medal" aria-hidden="true"></ion-icon>
+                    </div>
+                    <div class="card-body flex-row">
+                        <span class="asset">$91,385</span>
+                        <span class="asset-index">+$175 today</span>
+                    </div>
                 </div>
 
-                <div class="project-item">
-                    <h3>title</h3>
-                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A necessitatibus dolore </div>
+                <div class="card col-4">
+                    <div class="card-header">
+                        <h5>Net Gain/Loss</h5>
+                        <ion-icon class="clr-lt-green" name="code-working" aria-hidden="true"></ion-icon>
+                    </div>
+                    <div class="card-body flex-row">
+                        <span class="asset">$52,106</span>
+                        <span class="asset-index">+$175 today</span>
+                    </div>
                 </div>
 
-                <div class="project-item">
-                    <h3>title</h3>
-                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A necessitatibus dolore </div>
+                <div class="card col-4">
+                    <div class="card-header">
+                        <div>
+                            <h4>Asset Allocation</h4>
+                            <p>My Assets</p>
+                        </div>
+                        <div>
+                            <ion-icon name="ellipsis-vertical"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="bar-chart">
+                            <div class="header flex-row">
+                                <span>$182,410</span>
+                                <div>
+                                    <span>7.82% <ion-icon name="trending-up" aria-hidden="true"></ion-icon></span>
+                                    <span>This month</span>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="m-market"></div>
+                                <div class="stocks"></div>
+                                <div class="bonds"></div>
+                            </div>
+                            <div class="footer">
+                                <div class="item">
+                                    <ion-icon name="ellipse" class="clr-primary" aria-hidden="true"></ion-icon>
+                                    <span>Money Market</span>
+                                </div>
+                                <div class="value">
+                                    $43,891
+                                </div>
+                                <div class="percentage percentage-market">37%</div>
+
+                                <div class="item">
+                                    <ion-icon name="ellipse" class="clr-purple" aria-hidden="true"></ion-icon>
+                                    <span>Stocks</span>
+                                </div>
+                                <div class="value">
+                                    $20,842
+                                </div>
+                                <div class="percentage percentage-stocks">22%</div>
+
+                                <div class="item">
+                                    <ion-icon name="ellipse" class="clr-lt-green" aria-hidden="true"></ion-icon>
+                                    <span>Bonds</span>
+                                </div>
+                                <div class="value">
+                                    $16,104
+                                </div>
+                                <div class="percentage percentage-bonds">9%</div>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
 
-                <div class="project-item">
-                    <h3>title</h3>
-                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A necessitatibus dolore </div>
+                <div class="card col-8">
+                    <div class="card-header">
+                        <div>
+                            <h4>Portfolio Performance Over Time</h4>
+                            <p>See How Your Portfolio Evolves Over Time</p>
+                        </div>
+                        <div class="filters">
+                            <button class="active">All</button>
+                            <button>Stock</button>
+                            <button>Money Market</button>
+                            <button>Bonds</button>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <img src="./images/chart.svg" alt="">
+                    </div>
                 </div>
-                <div class="project-item">
-                    <h3>title</h3>
-                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A necessitatibus dolore </div>
+
+                <div class="card col-7">
+                    <div class="card-header">
+                        <div>
+                            <h4>Explore Other Opportunities</h4>
+                            
+                        </div>
+
+                        <div class="filters">
+                            <button>
+                                <ion-icon name="options" aria-hidden="true"></ion-icon>
+                                Filters
+                            </button>
+                            <button class="active">
+                                See All
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="secondary-card">
+                            <div class="header">
+                                <div>ETF</div>
+                                <div>
+                                    <h4>Exchange-Traded Fund</h4>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt voluptate quod mollitia veniam?</p>
+                            </div>
+                        </div>
+
+                        <div class="secondary-card">
+                            <div class="header">
+                                <div>RI</div>
+                                <div>
+                                    <h4>Real Estate</h4>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum mollitia laborum dolores consectetur.</p>
+                            </div>
+                        </div>
+
+                        <div class="secondary-card">
+                            <div class="header">
+                                <div>PE</div>
+                                <div>
+                                    <h4>Private Equity</h4>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad atque assumenda id adipisci?</p>
+                            </div>
+                        </div>
+
+                        <div class="secondary-card">
+                            <div class="header">
+                                <div>COM</div>
+                                <div>
+                                    <h4>Commodities</h4>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero amet quibusdam neque voluptates?</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="announcements">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+                <div class="card col-5">
+                    <div class="card-header">
+                        <div>
+                            <h4>Investment Goals</h4>
+                            <p>Plant for your future goals.</p>
+                        </div>
+                        <div>
+                            <ion-icon name="ellipsis-vertical" aria-hidden="true"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="secondary-card">
+                            <div class="header">
+                                <div>NH2</div>
+                                <div>
+                                    <h4>New House 2030</h4>
+                                    <p>2030</p>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tenetur aperiam quo hic fugit?</p>
+                            </div>
+                        </div>
+                        <div class="secondary-card">
+                            <div class="header">
+                                <div>RET</div>
+                                <div>
+                                    <h4>Retirement</h4>
+                                    <p>2060</p>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eius incidunt ut aperiam et!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <div class="trending">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                
-            </div>
-
-        </div>
-
+        </main>
     </div>
-    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
